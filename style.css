@@ -1,0 +1,39 @@
+#messageBoards {
+    display: grid;
+    gap: 6px;
+    margin: top 10px;
+    border: 1px solid black;
+    width: 256px;
+    margin-top: 30px;
+    padding: 8px;
+    background-image: url("IMAGES/messageBoard.jpg");
+    background-size: 100%;
+}
+
+#messageBoards div {
+    padding: 2px;
+    border: 2px dotted lightblue;
+    font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+}
+
+#actions { display: flex; }
+
+#actions button {
+    background-color: coral;
+    color: white;
+    border: 2px solid brown;
+    border-radius: 20px;
+    padding: 15px;
+    display: flex;
+    flex-direction: row;
+    margin-inline-start: 20px;
+    box-shadow: 0 5px #666;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#actions button:active {
+  background-color: rgb(235, 84, 29);
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
