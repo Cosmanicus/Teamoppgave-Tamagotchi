@@ -1,3 +1,33 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+}
+/* backgroundDay */
+.BGF, .BGFnatt {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.BGFnatt {
+    z-index: -2;
+}
+      
+#app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
 #messageBoards {
     display: grid;
     gap: 6px;
@@ -18,7 +48,7 @@
 
 #actions { display: flex; }
 
-#actions button {
+#actions button, .mutebutton, .larvikadspace {
     background-color: coral;
     color: white;
     border: 2px solid brown;
@@ -26,7 +56,8 @@
     padding: 15px;
     display: flex;
     flex-direction: row;
-    margin-inline-start: 20px;
+    margin-inline-start: 10px;
+    margin-inline-end: 10px;
     box-shadow: 0 5px #666;
     cursor: pointer;
     font-weight: bold;
@@ -37,3 +68,28 @@
   box-shadow: 0 5px #666;
   transform: translateY(4px);
 }
+
+.mutebutton {
+    margin-top: 20px;
+    width: 64px;
+    height: 64px;
+}
+
+.mutebutton img {
+    border: 1px solid black;
+    border-radius: 20px;
+
+}
+
+.larvikadspace {
+    margin-top: 20px;
+}
+
+#catpics img {
+    margin-top: 20px;
+    width: fit-content;
+    height: 250px;
+}
+/*  */
+
+

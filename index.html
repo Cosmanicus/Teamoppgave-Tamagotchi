@@ -7,21 +7,56 @@
 
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body onload="PlayMusic()">
     <div id="app">
+        <!-- BackgroundDay -->
+        <img id="bgf" src="IMAGES/standard_Herregården_i_Larvik_sett_fra_Bastionhagen_1_.jpg" class="BGF">
+        <img id="bgfnatt" src="IMAGES/bakgrunn natt.png" class="BGFnatt">
+
         <div id="actions">
-            <button class="button1" onclick="pet()">PET</button>
-            <button class="button2" onclick="play()">PLAY</button>
-            <button class="button3" onclick="giveFood()">FEED</button>
-            <button class="button4" onclick="Wardrobe()">WARDROBE</button>
+            <!-- Knapper -->
+            <button class="pet" onclick="pet()">PET</button>
+            <button class="play" onclick="playwithcat()">PLAY</button>
+            <button class="givefood" onclick="giveFood()">FEED</button>
+            <button class="sleepCycle" onclick="sleepOrWakeUp()">SLEEP</button>
+            <button class="wardrobe" onclick="Wardrobe()">WARDROBE</button>
         </div>
 
+        
+
+        <!-- Meldinger -->
         <div id="messageBoards">
             <div id="healthMessageBoard">Health alerts will display here :)</div>
             <div id="foodMessageBoard">Food alerts will display here :)</div>
             <div id="happyMessageBoard">Happiness alerts will display here :)</div>
         </div>
+
+        <div id="stats">
+            <div id="healthdisplay"></div>
+            <div id="hungerdisplay"></div>
+            <div id="happinessdisplay"></div>
+        </div>
+
+        <!-- Bilde av katt -->
+        <div id="catpics">
+            <img id="kitten" src="IMAGES/Kitten.png" alt="Kitten">
+        </div>
+
+        <!-- Mute knapp -->
+        <button class="mutebutton" onclick="MuteSound()"><img src="IMAGES/Mute.png" alt=""></button>
+
+        <div class="larvikadspace">DETTE ER LARVIK</div>
     </div>
+
+
+    
+
+
+    <!-- Musikkfiler i html body skjult -->
+    <audio id="musikk" autoplay><source src="SOUND/the-cat-with-900-lives-356402.mp3" type="audio/mpeg"></audio>
+    <audio id="catPurr" autoplay><source src="SOUND/cat-purr-edited.mp3" type="audio/mpeg"></audio>
+    <audio id="meow" autoplay><source src="SOUND/cat-meow-6226.mp3" type="audio/mpeg"></audio>
+    <audio id="Sleeping" autoplay><source src="SOUND/snoring-edited.mp3" type="audio/mpeg"></audio>
 
     <script src="script.js"></script>
 </body>
